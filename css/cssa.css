@@ -1,0 +1,271 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    justify-content:center;
+}
+
+body{
+    background: linear-gradient(to right, #A3AF9E,rgb(119, 203, 119));
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-frame {
+	max-width: 1400px;
+    height: auto;
+	margin-bottom: 5px;
+	overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+    max-width: 1400px;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+header nav {
+	background:  #4e4d4d;
+	overflow: hidden;
+	display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+header nav ul {
+	list-style: none;
+
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a {
+	display: block;
+	color: rgb(83, 201, 37);
+	text-decoration: none;
+	font-size: 20px;
+}
+header nav ul li a:hover {
+	background: #ffffff;
+	transform: scale(1.2);
+}
+header nav ul li ul li a{
+	float:center;
+    max-width: 100%;
+}
+nav > li{
+	float: left;
+}
+nav li a{
+	background:  #4e4d4d;
+	padding: 10px 12px;
+	display: block;
+}
+nav li ul {
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+nav li:hover > ul {
+	display: block;
+	
+}
+
+footer {
+	margin-top: 20px;
+	background: #4e4d4d;
+	padding: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction:row;
+    flex-wrap: wrap;
+	justify-content:space-between;
+}
+
+footer .autor {
+	text-align: justify;
+}
+
+.redes-sociales img:hover{
+    transform: scale(1.1);
+}
+
+@media  (max-width: 1000px) {
+    .slider-frame{
+		display: none;
+    }
+    
+}
+ /* Global Stylings */
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.80rem;
+    border: 1px solid rgb(134, 233, 151);
+    border-radius: 0.25rem;
+}
+
+  /* Formulario */
+.form {
+    width: 100%;
+	min-width: 480px;
+    margin: 10% auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.input-group {
+    margin: 2rem 0;
+}
+
+.form-box h3{
+	margin-left: 5px;
+	margin-bottom: 3px;
+	font-size: 15px;
+}
+
+  /* Button */
+
+.btn-group {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+	align-content: center;
+	align-items: center;
+}
+
+.btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: green;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+	font-weight: bold;
+	font-size: 18px;
+	}
+
+.btn:hover {
+	background-color: #A3AF9E;
+	color: black;
+}
+
+.error{
+	color: red;
+}
+
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+/* Eliminamos la fecha que por defecto aparece en el desplegable */
+.content-select select::-ms-expand {
+    display: none;
+}
+
+.content-select{
+	max-width: 250px;
+	position: relative;
+}
+
+.content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	padding: 7px 10px;
+	height: 42px;
+	outline: 0; 
+	border: 0;
+	color: #7b7b7b;
+	color: #999;
+    position: relative;
+    transition: all 0.25s ease;
+	border: 1px solid rgb(134, 233, 151);
+    border-radius: 0.25rem;
+}
+
+.content-select select:hover{
+	background: #B1E8CD;
+}
+.content-select i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #2AC176;
+	border-bottom:4px solid #2AC176;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+
+.content-select:hover i{
+	margin-top: 3px;
+}
+
+.logo-name img{
+    width: 150px;
+    margin-right: 10px;
+}
+
+.logo-name{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: flex-end;
+}

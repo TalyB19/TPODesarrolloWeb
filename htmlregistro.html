@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/cssa.css">
+	<link rel="icon" href="img/icono.ico">
+	<script src="js/validator.js"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+    
+    <header>
+		<div class="slider-frame">
+			<ul>
+				<li><img src="img/1.jpg" alt="Centro Argentino"></li>
+				<li><img src="img/2.jpg" alt="Sur Argentino"></li>
+				<li><img src="img/3.jpg" alt="Norte Argentino"></li>
+				<li><img src="img/4.jpg" alt="Sur Argentino"></li>
+			</ul>
+		</div>
+		<!-- <div id="logo"></div> -->
+
+		<nav>
+			<ul class="navegacion">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="">Parques</a>
+					<ul class="minimenu">
+						<li><a href="norte.html">Región Norte</a></li>
+						<li><a href="centro.html">Región Central</a></li>
+                        <li><a href="sur.html">Región Sur</a></li>
+					</ul>
+				</li>
+                <li><a href="imagenes.html">Galeria</a></li>
+				<li><a href="#footer-contacto">Contacto</a></li>
+                <li><a href="htmlloguin.html">Login</a></li>
+			</ul>
+		</nav>
+    </header>
+	
+    <section>
+        <form action="htmlloguin.html" method="" class="form" id="perfil" onsubmit="return validarReg();">
+			<h1 class="text-center">Registro de Usuario</h1>
+			<!-- Paso 1-->
+			<div class="form-box">
+				<br>
+				<h3>Tipo de documento</h3>
+				<div class="content-select">
+					<select name="tipo" id="tipo"  class="content-select" >
+						<option disabled selected value="">Tipo de documento</option>
+						<option value="DNI">DNI</option>
+						<option value="LC">LC</option>
+						<option value="LE">LE</option>
+						<option value="CUIL">CUIL</option>
+						<option value="CUIT">CUIT</option>
+					</select>
+					<i></i>
+				</div>
+				<br>
+				<h3>DNI</h3>
+				<input type="text" class="text dni" name="documento" id="documento" placeholder="Ej. 12123123" required>
+				<br>
+			</div>
+			<div class="form-box">
+				<h3>Apellido</h3>
+				<input type="text" class="text apellido" name="apellido" id="apellido" placeholder="Tu/s apellido/s" required>
+				<div id="adver2" class="adver2"></div>
+				<br>
+				<h3>Nombre</h3>
+				<input type="text" class="text nombre" name="nombre" id="nombre" placeholder="Tu/s nombre/s" required>
+				<div id="adver3" class="adver3"></div>
+				<br>
+				<h3>Fecha de Nacimiento</h3>
+				<input type="date"  class="text date" id="date" name="date" required/>
+				<div id="adver5" class="adver5"></div>
+				<br>
+				<h3>Email</h3>
+				<input type="email" class="text correo" name="email" id="email" placeholder="tuemail@dominio.com" required>
+				<div id="adver4" class="adver4"></div>
+				<br>
+				<h3>Contraseña</h3>
+				<input type="password" class="text password" name="password" id="password" placeholder="8 caracteres como mínimo" required>
+				<div id="adver4" class="adver4"></div>
+				<br>
+				<div class="btn-group">
+					<input  class="btn" type="submit" value="Registrarse">
+				</div>
+			</div>
+		</form>
+
+		<div id="warnings">
+			
+		</div>
+
+    </section>
+
+    <footer id="footer-contacto">
+        <div class="logo-name">
+            <img src="img/Logo.png" alt="">
+            <div class="autor">
+                <h5>Alvarez, Nelson</h5>
+                <h5>Beltran Niz, Aylen Nataly</h5>
+                <h5>Mac Corquodale, Matias</h5>
+            </div>
+        </div>
+        <div class="redes-sociales">
+            <a href="http://instagram.com" target="_blank"><img src="img/ig.png"  alt="red social- instagram"></a>
+            <a href="http://facebook.com" target="_blank"><img src="img/fb.png" alt="red social-facebook"></a>
+        </div>
+            
+    </footer>
+
+</body>
+</html>

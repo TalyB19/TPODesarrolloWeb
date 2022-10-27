@@ -1,0 +1,393 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    justify-content:center;
+}
+
+body{
+    background: linear-gradient(to right, #A3AF9E,rgb(119, 203, 119));
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-frame {
+	max-width: 1400px;
+    height: auto;
+	margin-bottom: 5px;
+	overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;;
+}
+
+.slider-frame img {
+	width: 100%;
+    max-width: 1400px;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+header nav {
+	background:  #4e4d4d;
+	overflow: hidden;
+	display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+header nav ul {
+	list-style: none;
+
+}
+header nav ul li{
+	float: left;
+}
+
+header nav ul li a {
+	
+	display: block;
+	color: rgb(83, 201, 37);
+	text-decoration: none;
+    font-size: 20px;
+}
+header nav ul li a:hover {
+	background: #ffffff;
+	transform: scale(1.2);
+}
+header nav ul li ul li a{
+	float:center;
+    max-width: 100%;
+}
+nav > li{
+	float: left;
+}
+nav li a{
+	background:  #4e4d4d;
+	padding: 10px 12px;
+	display: block;
+}
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+nav li:hover > ul {
+	display: block;
+	
+}
+
+footer {
+	margin-top: 20px;
+	background: #4e4d4d;
+	padding: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .autor {
+	text-align: justify;
+}
+
+.redes-sociales img:hover{
+    transform: scale(1.1);
+}
+
+@media  (max-width: 1000px) {
+    .slider-frame{
+        display: none;
+    }
+    
+}
+
+/* Main */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+.main-objetivo {
+    margin-top: 10px;
+    width: auto;
+    max-width: 1400px;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 15px;
+    border: solid 1px #4e4d4d;
+}
+
+.pie-fin {
+    width: auto;
+    max-width: 1400px;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 15px;
+    border: solid 1px #4e4d4d;
+}
+
+.main-objetivo h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-objetivo p {
+    padding: 5px;
+    margin: 5px;
+}
+
+.main-objetivo h2{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.pie-fin p {
+    padding: 5px;
+    margin: 5px;
+}
+
+.pie-fin h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.main-regiones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 410px;
+    height: 260px;
+    margin: 35px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotatey(0deg);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #4e4d4d;
+    padding: 15px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card .back .link-region a {
+    padding: 10px;
+    border-top: solid 1px #ffffff;
+    height: 50px;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.card .back .link-region a {
+    color: #4e96bc;
+
+}
+
+.card .back .h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.face .back .p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(-180deg); 
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(-360deg); 
+}
+
+.pie-noticias {
+    width: auto;
+    max-width: 1400px;
+    padding: 20px;
+    align-items: center;
+}
+
+.pie-fin {
+    width: auto;
+    max-width: 1400px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.api-clima {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    border: solid 1px #4e4d4d;
+    background: linear-gradient(to right,rgb(119, 203, 119), rgb(104, 174, 198));
+}
+
+.api-clima h2{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.cont-api {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.form-clima {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-clima form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-clima form input,select{
+    width: 100%;
+    margin: 15px;
+    border: 1px solid rgb(134, 233, 151);
+    text-align: center;
+    border-radius: 15px;
+    padding: 0.75rem;
+    font-weight: bold;
+	font-size: 15px;
+}
+
+.result {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 35px;
+    border-radius: 15px;
+}
+
+.result #ciudad,#temp{
+    width: 50%;
+}
+
+.boton-clima {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: green;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+	font-weight: bold;
+	font-size: 18px;
+    border: 1px solid rgb(134, 233, 151);
+}
+
+.boton-clima:hover {
+    background: #A3AF9E;
+    color: black;
+}
+
+.logo-name img{
+    width: 150px;
+    margin-right: 10px;
+}
+
+.logo-name{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: flex-end;
+}
+
+

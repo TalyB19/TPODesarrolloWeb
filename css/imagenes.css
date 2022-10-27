@@ -1,0 +1,184 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    justify-content:center;
+}
+
+body{
+    background: linear-gradient(to right, #A3AF9E,rgb(119, 203, 119));
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.slider-frame {
+	max-width: 1400px;
+    height: auto;
+	margin-bottom: 5px;
+	overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;;
+}
+
+.slider-frame img {
+	width: 100%;
+    max-width: 1400px;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+header nav {
+	background:  #4e4d4d;
+	overflow: hidden;
+	display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+header nav ul {
+	list-style: none;
+
+}
+header nav ul li{
+	float: left;
+}
+
+header nav ul li a {
+	
+	display: block;
+	color: rgb(83, 201, 37);
+	text-decoration: none;
+    font-size: 20px;
+}
+header nav ul li a:hover {
+	background: #ffffff;
+	transform: scale(1.2);
+}
+header nav ul li ul li a{
+	float:center;
+    max-width: 100%;
+}
+nav > li{
+	float: left;
+}
+nav li a{
+	background:  #4e4d4d;
+	padding: 10px 12px;
+	display: block;
+}
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+nav li:hover > ul {
+	display: block;
+	
+}
+
+footer {
+	margin-top: 20px;
+	background: #4e4d4d;
+	padding: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .autor {
+	text-align: justify;
+}
+
+.redes-sociales img:hover{
+    transform: scale(1.1);
+}
+
+@media  (max-width: 1000px) {
+    .slider-frame{
+        display: none;
+    }
+    
+}
+
+
+.galeria{
+    width:100%;
+    margin-top: 20px;
+    text-align: center;
+	max-width: 1400px;
+}
+ 
+.galeria img{
+    vertical-align: top;
+    width: 250px;
+    margin: 13px;
+    padding: 5px;
+    border: 1px solid #706f6f;
+    transition:all 0.5s linear;
+	transition-delay:0.1s;
+    border-radius: 15px;
+  
+    
+}
+
+.galeria img:hover {
+    border: 1px solid #FFF;
+    opacity: 1;
+    filter: blur(1px);
+    transform: rotate(0.5deg) scale(1.1);
+    
+}
+
+.titulo-gal{
+	width: 100%;
+	text-align: center;
+}
+
+h1{
+    margin-top: 20px;
+}
+
+.logo-name img{
+    width: 150px;
+    margin-right: 10px;
+}
+
+.logo-name{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.redes-sociales{
+    display: flex;
+    align-items: flex-end;
+}
